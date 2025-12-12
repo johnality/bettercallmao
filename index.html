@@ -11,7 +11,7 @@
     body {
       font-family: 'Bitter', serif;
       margin: 0;
-      padding: 3rem;
+      padding: 2rem;
       line-height: 1.6;
       background: #f8f8f8;
       color: #222;
@@ -59,14 +59,14 @@
       text-align: center;
     }
 
-    .president-photo img { max-width: 375px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .president-photo img { max-width: 375px; border-radius: 50%; /* removed shadow */: 0 2px 8px rgba(0,0,0,0.15); }
 
     footer {
       text-align: center;
       padding: 1.5rem;
       background: #ffffff;
       margin-top: 0;
-      box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+      /* removed shadow */: 0 -2px 4px rgba(0,0,0,0.1);
     }
 
     .contact a {
@@ -75,7 +75,7 @@
       font-weight: bold;
     }
   .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 0 auto;
     }
   </style>
@@ -84,17 +84,14 @@
   <div class="container">
   <header>
     <div class="tagline">Need a ride?</div>
-    <img src="images/logo preview white cropped.png" alt="Business Logo" class="logo" />
+    <img src="images/logo%20preview%20white%20cropped.png" alt="Business Logo" class="logo" />
   </header>
 
   <section class="about-section">
     <div class="about-text">
       <h2 style="font-family: 'Lobster', sans-serif; font-size: 3rem;">About Mao</h2>
-      <p style="font-size: 1.5rem;">
-        Write a short, clear paragraph about your business here — what you do,
-        what you specialise in, and why customers should trust or choose you.
-        Keep it friendly and confident.
-      </p>
+      <style>.about-text h2{margin-bottom:0.2rem;}</style>
+      <p style="font-size: 1.5rem; margin-top:0.5rem;">Mao has over ten years of professional transportation experience in the Orlando area. Customers love Mao's professional and friendly approach. He is available for private hires, corporate functions, airport transfers, and more.</p>
     </div>
 
     <div class="president-photo">
@@ -104,8 +101,8 @@
 
   <footer>
     <div class="contact">
-      <p style="font-size: 2rem;"><strong style="font-family: 'Lobster', sans-serif; font-size: 2.5rem;">Phone:</strong> (000) 000-0000</p>
-      <p style="font-size: 2rem;"><strong style="font-family: 'Lobster', sans-serif; font-size: 2.5rem;">Email:</strong> <a href="mailto:info@example.com">info@example.com</a></p>
+      <p style="font-size: 1.5rem; margin-bottom:0.5rem;"><strong style="font-family: 'Lobster', sans-serif; font-size: 1.8rem;">Phone:</strong> (000) 000-0000</p>
+      <p style="font-size: 2rem;"><strong style="font-family: 'Lobster', sans-serif; font-size: 2.5rem;">Email:</strong> <a href="mailto:info@example.com" style="font-weight: normal;">info@example.com</a></p>
     </div>
   <p style="margin-top:1rem; font-size:1.2rem;">Better Call Mao, LLC</p>
   </footer>
