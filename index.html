@@ -4,10 +4,11 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Better Call Mao</title>
+
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;700&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Bitter:wght@300;400;500;700&display=swap'); /* Fallback if Script1 Script Casual isn’t available */
+
     body {
       font-family: 'Bitter', serif;
       margin: 0;
@@ -17,22 +18,26 @@
       color: #222;
     }
 
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
     header {
       text-align: center;
       padding: 2rem 1rem;
       background: #ffffff;
-      /* removed shadow */
     }
 
     .tagline {
       font-family: 'Lobster', sans-serif;
       font-size: 4rem;
-      font-weight: bold;
       margin-bottom: 1rem;
     }
 
     .logo {
       max-width: 750px;
+      width: 100%;
       margin: 0 auto;
       display: block;
     }
@@ -41,16 +46,26 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      align-items: flex-start;
+      align-items: center;
       padding: 3rem 1rem;
       background: #ffffff;
-      margin-top: 0;
     }
 
     .about-text {
       flex: 1 1 300px;
-      padding: 1rem;
       max-width: 500px;
+      padding: 1rem;
+    }
+
+    .about-text h2 {
+      font-family: 'Lobster', sans-serif;
+      font-size: 3rem;
+      margin-bottom: 0.2rem;
+    }
+
+    .about-text p {
+      font-size: 1.5rem;
+      margin-top: 0.5rem;
     }
 
     .president-photo {
@@ -59,53 +74,110 @@
       text-align: center;
     }
 
-    .president-photo img { max-width: 375px; border-radius: 50%; /* removed shadow */: 0 2px 8px rgba(0,0,0,0.15); }
+    .president-photo img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 50%;
+      border: 4px solid #1e5eff;
+    }
 
     footer {
       text-align: center;
       padding: 1.5rem;
       background: #ffffff;
-      margin-top: 0;
-      /* removed shadow */: 0 -2px 4px rgba(0,0,0,0.1);
+    }
+
+    .contact p {
+      margin: 0.3rem 0;
+      font-size: 1.5rem;
+    }
+
+    .contact strong {
+      font-family: 'Lobster', sans-serif;
+      font-weight: normal;
+      margin-right: 0.4rem;
     }
 
     .contact a {
       color: #222;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: normal;
     }
-  .container {
-      max-width: 1000px;
-      margin: 0 auto;
+
+    .footer-company {
+      margin-top: 0.8rem;
+      font-size: 1.2rem;
+    }
+
+    /* ---------- MOBILE ---------- */
+
+    @media (max-width: 768px) {
+      body {
+        padding: 1rem;
+      }
+
+      .tagline {
+        font-size: 2.5rem;
+      }
+
+      .about-section {
+        flex-direction: column;
+        padding: 2rem 1rem;
+      }
+
+      .about-text h2 {
+        font-size: 2.2rem;
+        text-align: center;
+      }
+
+      .about-text p {
+        font-size: 1.2rem;
+        text-align: center;
+      }
+
+      .president-photo img {
+        max-width: 280px;
+      }
+
+      .contact p {
+        font-size: 1.2rem;
+      }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
-  <header>
-    <div class="tagline">Need a ride?</div>
-    <img src="images/logo%20preview%20white%20cropped.png" alt="Business Logo" class="logo" />
-  </header>
 
-  <section class="about-section">
-    <div class="about-text">
-      <h2 style="font-family: 'Lobster', sans-serif; font-size: 3rem;">About Mao</h2>
-      <style>.about-text h2{margin-bottom:0.2rem;}</style>
-      <p style="font-size: 1.5rem; margin-top:0.5rem;">Mao has over ten years of professional transportation experience in the Orlando area. Customers love Mao's professional and friendly approach. He is available for private hires, corporate functions, airport transfers, and more.</p>
-    </div>
+    <header>
+      <div class="tagline">Need a ride?</div>
+      <img src="images/logo%20preview%20white%20cropped.png" alt="Business Logo" class="logo" />
+    </header>
 
-    <div class="president-photo">
-      <img src="images/Mauricio.jpg" alt="President Photo" />
-    </div>
-  </section>
+    <section class="about-section">
+      <div class="about-text">
+        <h2>About Mao</h2>
+        <p>
+          Mauricio Correa has over ten years of professional transportation
+          experience in the Orlando area. Customers love Mao's professional
+          and friendly approach. He is available for private hires,
+          corporate functions, airport transfers, and more.
+        </p>
+      </div>
 
-  <footer>
-    <div class="contact">
-      <p style="font-size: 1.5rem; margin-bottom:0.5rem;"><strong style="font-family: 'Lobster', sans-serif; font-size: 1.8rem;">Phone:</strong> (000) 000-0000</p>
-      <p style="font-size: 2rem;"><strong style="font-family: 'Lobster', sans-serif; font-size: 2.5rem;">Email:</strong> <a href="mailto:info@example.com" style="font-weight: normal;">info@example.com</a></p>
-    </div>
-  <p style="margin-top:1rem; font-size:1.2rem;">Better Call Mao, LLC</p>
-  </footer>
+      <div class="president-photo">
+        <img src="images/Mauricio.jpg" alt="President Photo" />
+      </div>
+    </section>
+
+    <footer>
+      <div class="contact">
+        <p><strong>Phone:</strong> (407) 202-9131</p>
+        <p><strong>Email:</strong> <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a></p>
+      </div>
+      <p class="footer-company">Better Call Mao, LLC</p>
+    </footer>
+
   </div>
 </body>
 </html>
