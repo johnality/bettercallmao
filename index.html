@@ -12,15 +12,16 @@
     body {
       font-family: 'Bitter', serif;
       margin: 0;
-      padding: 2rem;
+      padding: 0 2rem; /* side margins only */
       line-height: 1.6;
-      background: linear-gradient(135deg, #bfc3c7, #d7dade);
+      background: linear-gradient(135deg, #e4e6e8, #f1f2f3);
       color: #222;
     }
 
     .container {
       max-width: 1000px;
       margin: 0 auto;
+      background: #ffffff;
     }
 
     header {
@@ -78,13 +79,21 @@
 
     footer {
       text-align: center;
-      padding: 1.5rem;
+      padding: 1.5rem 1rem 2rem;
       background: #ffffff;
     }
 
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
     .contact p {
-      margin: 0.3rem 0;
+      margin: 0;
       font-size: 1.5rem;
+      white-space: nowrap;
     }
 
     .contact strong {
@@ -100,7 +109,7 @@
     }
 
     .footer-company {
-      margin-top: 0.8rem;
+      margin-top: 0.9rem;
       font-size: 1.2rem;
     }
 
@@ -108,7 +117,7 @@
 
     @media (max-width: 768px) {
       body {
-        padding: 1rem;
+        padding: 0 1rem;
       }
 
       .tagline {
@@ -129,6 +138,11 @@
         max-width: 280px;
       }
 
+      .contact {
+        flex-direction: column;
+        gap: 0.5rem;
+      }
+
       .contact p {
         font-size: 1.2rem;
       }
@@ -141,7 +155,7 @@
 
     <header>
       <div class="tagline">Need a ride?</div>
-      <img src="images/logo%20preview%20white%20cropped.png" alt="Business Logo" class="logo" />
+      <img src="images/Better-Call-Saul-WHITE.jpg" alt=" " class="logo" />
     </header>
 
     <section class="about-section">
