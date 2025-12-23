@@ -12,16 +12,16 @@
     body {
       font-family: 'Libre Baskerville', serif;
       margin: 0;
-      padding: 0 4rem; /* wider side buffer */
+      padding: 0 4rem;
       line-height: 1.6;
       background: linear-gradient(
         to right,
-        #000000 0%,
-        #1a1a1a 3%,
-        #ffffff 12%,
-        #ffffff 88%,
-        #1a1a1a 97%,
-        #000000 100%
+        #d2d4d7 0%,
+        #e2e4e7 6%,
+        #ffffff 18%,
+        #ffffff 82%,
+        #e2e4e7 94%,
+        #d2d4d7 100%
       );
       color: #222;
     }
@@ -30,7 +30,7 @@
       max-width: 1000px;
       margin: 0 auto;
       background: #ffffff;
-      padding: 0 2rem; /* inner white breathing room */
+      padding: 0 2rem;
       position: relative;
     }
 
@@ -46,7 +46,7 @@
     .tagline {
       font-family: 'Lobster', sans-serif;
       font-size: 4rem;
-      margin-bottom: -1.2rem; /* OVERLAP into logo whitespace */
+      margin-bottom: -2.1rem; /* pushed DOWN aggressively */
       position: relative;
       z-index: 5;
     }
@@ -82,8 +82,15 @@
 
     .about-text p {
       font-size: 1.7rem;
-      margin: 0;
+      margin: 0 0 1.4rem;
       text-align: justify;
+    }
+
+    .about-divider {
+      width: 60%;
+      height: 1px;
+      background: #ccc;
+      margin: 1.6rem auto 1.6rem;
     }
 
     .president-photo {
@@ -98,7 +105,7 @@
       max-width: 420px;
       width: 100%;
       border-radius: 50%;
-      border: 6px solid #3272C1; /* thicker ring */
+      border: 6px solid #3272C1;
       background: #ffffff;
     }
 
@@ -106,7 +113,7 @@
 
     footer {
       text-align: center;
-      padding: 2rem 1rem 2.5rem;
+      padding: 2.5rem 1rem 3rem;
       position: relative;
       z-index: 6;
     }
@@ -116,6 +123,7 @@
       justify-content: center;
       gap: 2.5rem;
       flex-wrap: wrap;
+      margin-bottom: 2.4rem; /* increased separation */
     }
 
     .contact p {
@@ -135,8 +143,14 @@
       text-decoration: none;
     }
 
+    .footer-divider {
+      width: 140px;
+      height: 1px;
+      background: #bbb;
+      margin: 0 auto 1.2rem;
+    }
+
     .footer-company {
-      margin-top: 1rem;
       font-size: 1.25rem;
     }
 
@@ -153,7 +167,7 @@
 
       .tagline {
         font-size: 2.5rem;
-        margin-bottom: -0.6rem;
+        margin-bottom: -1.2rem;
       }
 
       .about-section {
@@ -194,7 +208,13 @@
     <section class="about-section">
       <div class="about-text">
         <p>
-          Known for his friendly, reliable service – Mauricio “Mao” Correa has over ten years of professional transportation experience in the Orlando area. Better Call Mao offers private hires, corporate travel, airport transfers, and more.
+          Known for his friendly, reliable service, Mauricio “Mao” Correa brings over ten years of professional transportation experience in the Orlando area.
+        </p>
+
+        <div class="about-divider"></div>
+
+        <p>
+          Better Call Mao offers private hires, corporate travel, airport transfers, and more.
         </p>
       </div>
 
@@ -208,6 +228,8 @@
         <p><strong>Phone:</strong> (407) 202-9131</p>
         <p><strong>Email:</strong> <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a></p>
       </div>
+
+      <div class="footer-divider"></div>
       <p class="footer-company">Better Call Mao, LLC</p>
     </footer>
 
