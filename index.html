@@ -6,21 +6,32 @@
   <title>Better Call Mao</title>
 
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    /* ---------- FONTS ---------- */
+
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+
+    @font-face {
+      font-family: 'SCRIPT1';
+      src: url('fonts/SCRIPT1-ScriptCasual.woff2') format('woff2'),
+           url('fonts/SCRIPT1-ScriptCasual.woff') format('woff');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    /* ---------- BASE ---------- */
 
     body {
-      font-family: 'Libre Baskerville', serif;
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0 4rem;
       line-height: 1.6;
       background: linear-gradient(
         to right,
-        #d2d4d7 0%,
-        #e2e4e7 6%,
-        #ffffff 18%,
-        #ffffff 82%,
-        #e2e4e7 94%,
+        #d2d4d7 0,
+        #e6e7ea 6vw,
+        #ffffff 14vw,
+        #ffffff calc(100% - 14vw),
+        #e6e7ea calc(100% - 6vw),
         #d2d4d7 100%
       );
       color: #222;
@@ -34,30 +45,25 @@
       position: relative;
     }
 
-    /* ---------- HEADER / LOGO ---------- */
+    /* ---------- HEADER ---------- */
 
     header {
       text-align: center;
-      padding: 1rem 1rem 0;
-      position: relative;
-      z-index: 1;
-    }
-
-    .tagline {
-      font-family: 'Lobster', sans-serif;
-      font-size: 4rem;
-      margin-bottom: -3.2rem; /* heavier overlap */
-      position: relative;
-      z-index: 5;
+      padding: 1.5rem 1rem 0;
     }
 
     .logo {
       max-width: 940px;
       width: 100%;
-      margin: 0 auto 1.2rem; /* small buffer below logo */
+      margin: 0 auto 0.6rem;
       display: block;
-      position: relative;
-      z-index: 1;
+    }
+
+    .service-line {
+      font-family: 'SCRIPT1', cursive;
+      font-size: 2.1rem;
+      letter-spacing: 0.04em;
+      margin-bottom: 1.6rem;
     }
 
     /* ---------- CONTENT ---------- */
@@ -68,9 +74,7 @@
       justify-content: center;
       align-items: center;
       padding: 2rem 1rem 2.5rem;
-      margin-top: -4.8rem; /* slightly less aggressive */
-      position: relative;
-      z-index: 6;
+      margin-top: -1.5rem;
       background: #ffffff;
     }
 
@@ -81,13 +85,13 @@
     }
 
     .about-text p {
-      font-size: 1.7rem;
+      font-size: 1.6rem;
       margin: 0 0 1.4rem;
       text-align: justify;
     }
 
     .about-divider {
-      width: 100%; /* matches text column exactly */
+      width: 100%;
       height: 1px;
       background: #ccc;
       margin: 1.6rem 0;
@@ -97,15 +101,13 @@
       flex: 1 1 250px;
       padding: 1rem;
       text-align: center;
-      position: relative;
-      z-index: 7;
     }
 
     .president-photo img {
       max-width: 420px;
       width: 100%;
       border-radius: 50%;
-      border: 6px solid #3272C1;
+      border: 10px solid #3272C1;
       background: #ffffff;
     }
 
@@ -114,8 +116,6 @@
     footer {
       text-align: center;
       padding: 2.5rem 1rem 3rem;
-      position: relative;
-      z-index: 6;
     }
 
     .contact {
@@ -123,7 +123,6 @@
       justify-content: center;
       gap: 2.5rem;
       flex-wrap: wrap;
-      margin-bottom: 2.8rem;
     }
 
     .contact p {
@@ -133,29 +132,15 @@
     }
 
     .contact strong {
-      font-family: 'Lobster', sans-serif;
+      font-family: 'SCRIPT1', cursive;
       font-weight: normal;
       margin-right: 0.4rem;
+      letter-spacing: 0.05em;
     }
 
     .contact a {
       color: #222;
       text-decoration: none;
-    }
-
-    .footer-company-wrap {
-      display: inline-block;
-    }
-
-    .footer-divider {
-      width: 100%; /* matches company text width */
-      height: 1px;
-      background: #bbb;
-      margin: 0 auto 1.2rem;
-    }
-
-    .footer-company {
-      font-size: 1.25rem;
     }
 
     /* ---------- MOBILE ---------- */
@@ -169,14 +154,12 @@
         padding: 0 1rem;
       }
 
-      .tagline {
-        font-size: 2.5rem;
-        margin-bottom: -1.6rem;
+      .service-line {
+        font-size: 1.6rem;
       }
 
       .about-section {
         flex-direction: column;
-        margin-top: -2.8rem;
         padding: 1.5rem 1rem 2rem;
       }
 
@@ -205,14 +188,14 @@
   <div class="container">
 
     <header>
-      <div class="tagline">Need a ride?</div>
-      <img src="images/Better-Call-Saul-WHITE.jpg" alt="Better Call Mao logo" class="logo" />
+      <img src="images/BCM-logo.png" class="logo" />
+      <div class="service-line">TRANSPORTATION SERVICES IN CENTRAL FLORIDA</div>
     </header>
 
     <section class="about-section">
       <div class="about-text">
         <p>
-          Known for his reliable and friendly service, Mauricio “Mao” Correa has over a decade of professional transportation experience in Central Florida.
+          Known for reliable service, Mauricio “Mao” Correa has over a decade of professional transportation experience in Central Florida.
         </p>
 
         <div class="about-divider"></div>
@@ -223,17 +206,17 @@
       </div>
 
       <div class="president-photo">
-        <img src="images/Mauricio.jpg" alt="President Photo" />
+        <img src="images/Mauricio.jpg" />
       </div>
     </section>
 
     <footer>
       <div class="contact">
-        <p><strong>Phone:</strong> (407) 202-9131</p>
-        <p><strong>Email:</strong> <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a></p>
+        <p><strong>Phone</strong> 407-202-9131</p>
+        <p><strong>Email</strong> <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a></p>
       </div>
+    </footer>
 
- 
   </div>
 </body>
 </html>
