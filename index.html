@@ -1,72 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Better Call Mao</title>
 
+  <!-- GOOGLE FONTS (SAFE METHOD) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+
   <style>
-    /* ---------- FONTS ---------- */
-
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
-
-    /* ---------- BASE ---------- */
-
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0 4rem;
-      line-height: 1.6;
-      background: linear-gradient(
-        to right,
-        #d2d4d7 0,
-        #e6e7ea 6vw,
-        #ffffff 14vw,
-        #ffffff calc(100% - 14vw),
-        #e6e7ea calc(100% - 6vw),
-        #d2d4d7 100%
-      );
+      font-family: 'Montserrat', sans-serif;
+      background: #e6e7ea;
       color: #222;
     }
 
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      background: #ffffff;
+      background: #fff;
       padding: 0 2rem;
-      position: relative;
     }
-
-    /* ---------- HEADER ---------- */
 
     header {
       text-align: center;
-      padding: 1.5rem 1rem 0;
+      padding: 2rem 1rem 1rem;
     }
 
     .logo {
-      max-width: 940px;
+      max-width: 900px;
       width: 100%;
-      margin: 0 auto 0.6rem;
       display: block;
+      margin: 0 auto;
     }
-
-    /* ---------- CONTENT ---------- */
 
     .about-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding: 2rem 1rem 2.5rem;
-      margin-top: -1.5rem;
-      background: #ffffff;
+      padding: 2rem 0;
     }
 
     .about-text {
-      flex: 1 1 300px;
       max-width: 500px;
       padding: 1rem;
       text-align: center;
@@ -74,5 +55,137 @@
 
     .about-text p {
       font-size: 1.6rem;
-      margin: 0 0 1.4rem;
-      text-alig
+      margin-bottom: 1.4rem;
+    }
+
+    .about-divider {
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      margin: 1.5rem 0;
+    }
+
+    .president-photo {
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .president-photo img {
+      max-width: 420px;
+      width: 100%;
+      border-radius: 50%;
+      border: 10px solid #3272C1;
+      background: #fff;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2.5rem 1rem 3rem;
+    }
+
+    .footer-divider {
+      width: 240px;
+      height: 1px;
+      background: #ccc;
+      margin: 0 auto 2rem;
+    }
+
+    .contact {
+      display: flex;
+      justify-content: center;
+      gap: 2.5rem;
+      flex-wrap: wrap;
+    }
+
+    .contact p {
+      margin: 0;
+      font-size: 1.9rem;
+      white-space: nowrap;
+    }
+
+    .contact strong {
+      font-family: 'Lobster', cursive;
+      font-weight: normal;
+      margin-right: 0.4rem;
+      letter-spacing: 0.05em;
+    }
+
+    .phone-label {
+      color: red;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .email-label {
+      color: yellow;
+      text-shadow: 2px 2px 0 #000;
+    }
+
+    .contact a {
+      color: #222;
+      text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        padding: 0 1.5rem;
+      }
+
+      .about-text p {
+        font-size: 1.2rem;
+      }
+
+      .contact {
+        flex-direction: column;
+        gap: 0.75rem;
+      }
+
+      .contact p {
+        font-size: 1.3rem;
+      }
+
+      .president-photo img {
+        max-width: 280px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <header>
+      <img src="images/BCM-logo.png" alt="Better Call Mao Logo" class="logo">
+    </header>
+
+    <section class="about-section">
+      <div class="about-text">
+        <p>
+          Known for his reliable and friendly service, Mauricio Correa has over a decade of professional transportation experience across Central Florida.
+        </p>
+
+        <div class="about-divider"></div>
+
+        <p>
+          Better Call Mao provides private hires, airport transfers, corporate transport, city tours, and shuttle services to theme parks and major attractions.
+        </p>
+      </div>
+
+      <div class="president-photo">
+        <img src="images/Mauricio.jpg" alt="Mauricio Correa">
+      </div>
+    </section>
+
+    <footer>
+      <div class="footer-divider"></div>
+
+      <div class="contact">
+        <p><strong class="phone-label">Phone</strong> 407-202-9131</p>
+        <p><strong class="email-label">Email</strong>
+          <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a>
+        </p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
