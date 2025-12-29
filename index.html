@@ -1,71 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Better Call Mao</title>
 
-  <!-- GOOGLE FONTS (SAFE METHOD) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
-
   <style>
+    /* ---------- FONTS ---------- */
+
+    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
+
+    /* ---------- BASE ---------- */
+
     body {
+      font-family: 'Montserrat', sans-serif;
       margin: 0;
       padding: 0 4rem;
-      font-family: 'Montserrat', sans-serif;
-      background: #e6e7ea;
+      line-height: 1.6;
+      background: linear-gradient(
+        to right,
+        #d2d4d7 0,
+        #e6e7ea 6vw,
+        #ffffff 14vw,
+        #ffffff calc(100% - 14vw),
+        #e6e7ea calc(100% - 6vw),
+        #d2d4d7 100%
+      );
       color: #222;
     }
 
     .container {
       max-width: 1000px;
       margin: 0 auto;
-      background: #fff;
+      background: #ffffff;
       padding: 0 2rem;
+      position: relative;
     }
+
+    /* ---------- HEADER ---------- */
 
     header {
       text-align: center;
-      padding: 2rem 1rem 1rem;
+      padding: 1.5rem 1rem 0;
     }
 
     .logo {
-      max-width: 900px;
+      max-width: 940px;
       width: 100%;
+      margin: 0 auto 0.6rem;
       display: block;
-      margin: 0 auto;
     }
+
+    /* ---------- CONTENT ---------- */
 
     .about-section {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-      padding: 2rem 0;
+      padding: 2rem 1rem 2.5rem;
+      margin-top: -1.5rem;
+      background: #ffffff;
     }
 
     .about-text {
+      flex: 1 1 300px;
       max-width: 500px;
       padding: 1rem;
-      text-align: center;
     }
 
     .about-text p {
       font-size: 1.6rem;
-      margin-bottom: 1.4rem;
+      margin: 0 0 1.4rem;
+      text-align: left;
     }
 
     .about-divider {
       width: 100%;
       height: 1px;
       background: #ccc;
-      margin: 1.5rem 0;
+      margin: 1.6rem 0;
     }
 
     .president-photo {
+      flex: 1 1 250px;
       padding: 1rem;
       text-align: center;
     }
@@ -75,19 +95,14 @@
       width: 100%;
       border-radius: 50%;
       border: 10px solid #3272C1;
-      background: #fff;
+      background: #ffffff;
     }
+
+    /* ---------- FOOTER ---------- */
 
     footer {
       text-align: center;
       padding: 2.5rem 1rem 3rem;
-    }
-
-    .footer-divider {
-      width: 240px;
-      height: 1px;
-      background: #ccc;
-      margin: 0 auto 2rem;
     }
 
     .contact {
@@ -110,28 +125,38 @@
       letter-spacing: 0.05em;
     }
 
-    .phone-label {
-      color: red;
-      text-shadow: 2px 2px 0 #000;
-    }
-
-    .email-label {
-      color: yellow;
-      text-shadow: 2px 2px 0 #000;
-    }
-
     .contact a {
       color: #222;
       text-decoration: none;
     }
+
+    /* ---------- MOBILE ---------- */
 
     @media (max-width: 768px) {
       body {
         padding: 0 1.5rem;
       }
 
+      .container {
+        padding: 0 1rem;
+      }
+
+      .service-line {
+        font-size: 1.6rem;
+      }
+
+      .about-section {
+        flex-direction: column;
+        padding: 1.5rem 1rem 2rem;
+      }
+
       .about-text p {
         font-size: 1.2rem;
+        text-align: left;
+      }
+
+      .president-photo img {
+        max-width: 280px;
       }
 
       .contact {
@@ -142,10 +167,6 @@
       .contact p {
         font-size: 1.3rem;
       }
-
-      .president-photo img {
-        max-width: 280px;
-      }
     }
   </style>
 </head>
@@ -154,7 +175,7 @@
   <div class="container">
 
     <header>
-      <img src="images/BCM-logo.png" alt="Better Call Mao Logo" class="logo">
+      <img src="images/BCM-logo.png" class="logo" />
     </header>
 
     <section class="about-section">
@@ -171,18 +192,23 @@
       </div>
 
       <div class="president-photo">
-        <img src="images/Mauricio.jpg" alt="Mauricio Correa">
+        <img src="images/Mauricio.jpg" />
       </div>
     </section>
 
     <footer>
       <div class="footer-divider"></div>
 
+      .footer-divider {
+        width: 240px;
+        height: 1px;
+        background: #ccc;
+        margin: 0 auto 2rem;
+      }
+
       <div class="contact">
-        <p><strong class="phone-label">Phone</strong> 407-202-9131</p>
-        <p><strong class="email-label">Email</strong>
-          <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a>
-        </p>
+        <p><strong>Phone</strong> 407-202-9131</p>
+        <p><strong>Email</strong> <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a></p>
       </div>
     </footer>
 
