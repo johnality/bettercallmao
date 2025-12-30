@@ -10,7 +10,6 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap');
 
     /* ---------- BASE ---------- */
 
@@ -19,15 +18,7 @@
       margin: 0;
       padding: 0 4rem;
       line-height: 1.6;
-      background: linear-gradient(
-        to right,
-        #d2d4d7 0,
-        #e6e7ea 6vw,
-        #ffffff 14vw,
-        #ffffff calc(100% - 14vw),
-        #e6e7ea calc(100% - 6vw),
-        #d2d4d7 100%
-      );
+      background: #ffffff; /* SCRAPPED FADE-TO-GREY */
       color: #222;
     }
 
@@ -36,7 +27,6 @@
       margin: 0 auto;
       background: #ffffff;
       padding: 0 2rem;
-      position: relative;
     }
 
     /* ---------- HEADER ---------- */
@@ -62,7 +52,6 @@
       align-items: center;
       padding: 2rem 1rem 2.5rem;
       margin-top: -1.5rem;
-      background: #ffffff;
     }
 
     .about-text {
@@ -74,7 +63,7 @@
     .about-text p {
       font-size: 1.6rem;
       margin: 0 0 1.4rem;
-      text-align: left;
+      text-align: left; /* DESKTOP DEFAULT */
     }
 
     .about-divider {
@@ -105,6 +94,13 @@
       padding: 2.5rem 1rem 3rem;
     }
 
+    .footer-divider {
+      width: 240px;
+      height: 1px;
+      background: #ccc;
+      margin: 0 auto 2rem;
+    }
+
     .contact {
       display: flex;
       justify-content: center;
@@ -130,26 +126,16 @@
       text-decoration: none;
     }
 
-.footer-divider {
-  width: 240px;
-  height: 1px;
-  background: #ccc;
-  margin: 0 auto 2rem;
-}
-    
     /* ---------- MOBILE ---------- */
 
     @media (max-width: 768px) {
+
       body {
-        padding: 0 1.5rem;
+        padding: 0 1.2rem;
       }
 
       .container {
-        padding: 0 1rem;
-      }
-
-      .service-line {
-        font-size: 1.6rem;
+        padding: 0 0.8rem;
       }
 
       .about-section {
@@ -159,20 +145,21 @@
 
       .about-text p {
         font-size: 1.2rem;
-        text-align: left;
+        text-align: center; /* MOBILE ONLY CENTERED */
       }
 
       .president-photo img {
         max-width: 280px;
+        border-width: 6px; /* THINNER BLUE RING ON MOBILE */
       }
 
       .contact {
         flex-direction: column;
-        gap: 0.75rem;
+        gap: 0.6rem;
       }
 
       .contact p {
-        font-size: 1.3rem;
+        font-size: 1.15rem; /* PHONE + EMAIL MATCHED & FIT */
       }
     }
   </style>
@@ -182,7 +169,7 @@
   <div class="container">
 
     <header>
-      <img src="images/BCM-logo.png" class="logo" />
+      <img src="images/BCM-logo.png" class="logo" alt="Better Call Mao Logo" />
     </header>
 
     <section class="about-section">
@@ -199,13 +186,12 @@
       </div>
 
       <div class="president-photo">
-        <img src="images/Mauricio.jpg" />
+        <img src="images/Mauricio.jpg" alt="Mauricio Correa" />
       </div>
     </section>
 
     <footer>
       <div class="footer-divider"></div>
-
 
       <div class="contact">
         <p><strong>Phone</strong> 407-202-9131</p>
