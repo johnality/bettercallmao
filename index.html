@@ -96,8 +96,21 @@
 
     .service-areas {
       text-align: center;
-      padding: 2.5rem 0;
-      color: #222;
+    }
+
+    .service-areas-inner {
+      display: inline-block;
+    }
+
+    .service-divider {
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      margin: 0 auto 2rem;
+    }
+
+    .service-divider.bottom {
+      margin: 2rem auto 0;
     }
 
     .service-areas .line-1,
@@ -115,15 +128,6 @@
       font-family: 'Lobster', cursive;
       font-size: 2.85rem;
       margin: 0.5rem 0;
-    }
-
-    /* ---------- DIVIDERS ---------- */
-
-    .service-divider {
-      width: 240px;
-      height: 1px;
-      background: #ccc;
-      margin: 3rem auto;
     }
 
     /* ---------- FOOTER ---------- */
@@ -231,13 +235,15 @@
     <section class="about-section">
       <div class="about-text">
         <p>
-          Known for his reliable and friendly service, Mauricio Correa has over ten years of professional transportation experience in Central Florida.
+Better Call Mao provides private transportation hires, airport transfers, corporate travel, city tours, and shuttle services to theme parks and major attractions across Florida.
+
         </p>
 
         <div class="about-divider"></div>
 
         <p>
-          Better Call Mao provides private hires, airport transfers, corporate transport, city tours, and shuttle services to theme parks and major attractions.
+          Known for his reliable and friendly service, Mauricio Correa has over ten years of professional transportation experience in Central Florida.
+
         </p>
       </div>
 
@@ -249,12 +255,16 @@
       </div>
     </section>
 
-    <div class="service-divider"></div>
-
     <div class="service-areas">
-      <div class="line-1">available in</div>
-      <div class="line-2">• Orlando • Tampa • Miami • Fort Lauderdale</div>
-      <div class="line-3">and across Central Florida</div>
+      <div class="service-areas-inner">
+        <div class="service-divider"></div>
+
+        <div class="line-1">available in</div>
+        <div class="line-2">• Orlando • Tampa • Miami • Fort Lauderdale</div>
+        <div class="line-3">and across Central Florida</div>
+
+        <div class="service-divider bottom"></div>
+      </div>
     </div>
 
     <footer>
