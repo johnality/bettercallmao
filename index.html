@@ -209,6 +209,16 @@
         font-size: 0.9rem;
       }
 
+      .service-areas .line-2 {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.service-areas .line-2 .row {
+  display: block;
+}
+
       .contact {
         flex-direction: column;
         gap: 0.6rem;
@@ -235,7 +245,7 @@
     <section class="about-section">
       <div class="about-text">
         <p>
-Private transportation hires, airport transfers, corporate travel, city tours, and shuttle services to theme parks and major attractions across Florida.
+Private transportation hires, airport transfers, corporate travel, city tours, and shuttle services to theme parks and major attractions in Florida.
 
         </p>
 
@@ -260,7 +270,10 @@ Private transportation hires, airport transfers, corporate travel, city tours, a
         <div class="service-divider"></div>
 
         <div class="line-1">Better Call Mao operates in</div>
-        <div class="line-2">• Orlando • Tampa • Miami • Fort Lauderdale</div>
+<div class="line-2">
+  <span class="row">• Orlando • Tampa</span>
+  <span class="row">• Miami • Fort Lauderdale</span>
+</div>
         <div class="line-3">and across Central Florida</div>
 
         <div class="service-divider bottom"></div>
