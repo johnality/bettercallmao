@@ -2,116 +2,83 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Better Call Mao</title>
 
-  <title>Florida Private Transportation Services and Airport Pickups | Better Call Mao</title>
-  <meta name="description" content="Professional airport transportation and private transport services across Florida. Serving Orlando, Miami, Tampa, Fort Lauderdale, and surrounding areas. Better Call Mao provides private hires, airport transfers, corporate travel, city tours, and shuttle services to theme parks and major attractions. Reliable friendly service, fair pricing. Hablamos español." />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
 
   <style>
-    /* ---------- FONTS ---------- */
-
-    @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap');
-
-    /* ---------- BASE ---------- */
+    html {
+      font-size: 62.5%;
+    }
 
     body {
-      font-family: 'Montserrat', sans-serif;
       margin: 0;
-      padding: 0 4rem;
-      line-height: 1.6;
-      background: #ffffff;
+      font-family: 'Montserrat', sans-serif;
       color: #222;
     }
 
-    .container {
-      max-width: 1000px;
-      margin: 0 auto;
-      padding: 0 2rem;
-    }
-
-    /* ---------- HEADER ---------- */
-
-    header {
-      text-align: center;
-      padding: 1.5rem 1rem 0;
-    }
-
-    .logo {
-      max-width: 940px;
-      width: 100%;
-      margin: 0 auto 0.6rem;
-      display: block;
-    }
-
-    /* ---------- ABOUT ---------- */
+    /* ---------- ABOUT SECTION ---------- */
 
     .about-section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 6rem 2rem;
       display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
+      gap: 4rem;
       align-items: center;
-      padding: 2rem 1rem 2.5rem;
-      margin-top: -1.5rem;
     }
 
     .about-text {
-      flex: 1 1 300px;
-      max-width: 500px;
-      padding: 1rem;
+      flex: 1;
     }
 
     .about-text p {
-      font-size: 1.6rem;
-      margin: 0 0 1.4rem;
-      text-align: left;
+      font-size: 1.9rem;
+      line-height: 1.6;
+      margin: 0;
     }
 
     .about-divider {
-      width: 100%;
+      width: 240px;
       height: 1px;
       background: #ccc;
-      margin: 1.6rem 0;
-    }
-
-    .president-photo {
-      flex: 1 1 250px;
-      padding: 1rem;
-      text-align: center;
+      margin: 3rem 0;
     }
 
     .president-photo img {
-      max-width: 420px;
+      max-width: 360px;
       width: 100%;
-      border-radius: 50%;
-      border: 10px solid #3272C1;
-      background: #ffffff;
+      border-radius: 6px;
     }
 
     /* ---------- SERVICE AREAS ---------- */
 
-.service-areas {
-  text-align: center;
-  padding: 2.5rem 0;
-  color: #222;
-}
-    
-.service-areas .line-1,
-.service-areas .line-3 {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 1.65rem;
-  letter-spacing: 0.12em;
-}
+    .service-wrapper {
+      text-align: center;
+      margin: 4rem auto 6rem;
+      display: inline-block;
+    }
 
-.service-areas .line-1 {
-  text-transform: lowercase;
-}
+    .service-divider {
+      width: 100%;
+      height: 1px;
+      background: #ccc;
+      margin: 0 auto 2.5rem;
+    }
 
-.service-areas .line-2 {
-  font-family: 'Lobster', cursive;
-  font-size: 2.85rem;        /* was 1.9rem */
-  margin: 0.5rem 0;
-}
+    .service-areas .locations {
+      font-family: 'Lobster', cursive;
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-areas .surrounding {
+      font-size: 1.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
 
     /* ---------- FOOTER ---------- */
 
@@ -120,26 +87,13 @@
       padding: 2.5rem 1rem 3rem;
     }
 
-    .contact-wrapper {
-      display: inline-block;
-    }
-
-.service-divider {
-  width: 240px;
-  height: 1px;
-  background: #ccc;
-  margin: 3rem auto;
-}
-    
     .footer-divider {
-      width: 100%;
+      width: 240px;
       height: 1px;
       background: #ccc;
       margin: 0 auto 2rem;
     }
 
-
-    
     .contact {
       display: flex;
       justify-content: center;
@@ -150,114 +104,64 @@
     .contact p {
       margin: 0;
       font-size: 1.9rem;
-      white-space: nowrap;
     }
 
     .contact strong {
       font-family: 'Lobster', cursive;
-      font-weight: normal;
+      font-weight: bold;
       margin-right: 0.4rem;
-      letter-spacing: 0.05em;
     }
 
     .contact a {
-      color: #222;
+      color: inherit;
       text-decoration: none;
-    }
-
-    /* ---------- MOBILE ---------- */
-
-    @media (max-width: 768px) {
-
-      body {
-        padding: 0 1.2rem;
-      }
-
-      .container {
-        padding: 0 0.8rem;
-      }
-
-      .about-section {
-        flex-direction: column;
-        padding: 1.5rem 1rem 2rem;
-      }
-
-      .about-text p {
-        font-size: 1.2rem;
-        text-align: center;
-      }
-
-      .president-photo img {
-        max-width: 280px;
-        border-width: 6px;
-      }
-
-      .service-areas .line-2 {
-        font-size: 1.3rem;
-      }
-
-      .service-areas .line-1,
-      .service-areas .line-3 {
-        font-size: 0.9rem;
-      }
-
-      .contact {
-        flex-direction: column;
-        gap: 0.6rem;
-      }
-
-      .contact p {
-        font-size: 1.15rem;
-      }
     }
   </style>
 </head>
 
 <body>
-  <div class="container">
 
-    <header>
-      <img src="images/BCM-logo.png" class="logo" alt="Better Call Mao Logo" />
-    </header>
+  <section class="about-section">
+    <div class="about-text">
+      <p>
+        Better Call Mao offers private transportation hires, airport transfers, corporate travel, city tours, and shuttle services to theme parks and major attractions across Florida.
+      </p>
 
-    <section class="about-section">
-      <div class="about-text">
-        <p>
-          Known for his reliable and friendly service, Mauricio Correa has over ten years of professional transportation experience in Central Florida.
-        </p>
+      <div class="about-divider"></div>
 
-        <div class="about-divider"></div>
+      <p>
+  Known for his reliable and friendly service, Mauricio Correa has over ten years of professional transportation experience in Central Florida.
+              
+      </p>
 
-        <p>
-          Better Call Mao provides private hires, airport transfers, corporate transport, city tours, and shuttle services to theme parks and major attractions.
-        </p>
-      </div>
+      <!-- SERVICE AREAS -->
+      <div class="service-wrapper">
+        <div class="service-divider"></div>
 
-      <div class="president-photo">
-        <img src="images/Mauricio.jpg" alt="Mauricio Correa" />
-      </div>
-    </section>
-
-<div class="service-divider"></div>
-
-    
-    <div class="service-areas">
-      <div class="line-1">available in</div>
-      <div class="line-2">• Orlando • Tampa • Miami • Fort Lauderdale</div>
-      <div class="line-3">and across Central Florida</div>
-    </div>
-
-    <footer>
-      <div class="contact-wrapper">
-        <div class="footer-divider"></div>
-
-        <div class="contact">
-          <p><strong>Phone</strong> 407-202-9131</p>
-          <p><strong>Email</strong> <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a></p>
+        <div class="service-areas">
+          <div class="locations">
+            • Orlando • Miami • Tampa • Fort Lauderdale
+          </div>
+          <div class="surrounding">
+            and surrounding areas
+          </div>
         </div>
       </div>
-    </footer>
+    </div>
 
-  </div>
+    <div class="president-photo">
+      <img src="images/Mauricio.jpg" alt="Mauricio Correa" />
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-divider"></div>
+
+    <div class="contact">
+      <p><strong>Phone</strong> 407-202-9131</p>
+      <p><strong>Email</strong> <a href="mailto:bettercallmao@gmail.com">bettercallmao@gmail.com</a></p>
+    </div>
+  </footer>
+
 </body>
 </html>
