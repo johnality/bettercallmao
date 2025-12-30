@@ -92,15 +92,18 @@
 
 .service-areas {
   text-align: center;
-  margin: 1.2rem 0 3.2rem;
+  padding: 2.5rem 0;
   color: #222;
 }
-
+    
 .service-areas .line-1,
 .service-areas .line-3 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 1.65rem;        /* was 1.1rem */
+  font-size: 1.65rem;
   letter-spacing: 0.12em;
+}
+
+.service-areas .line-1 {
   text-transform: lowercase;
 }
 
@@ -121,6 +124,13 @@
       display: inline-block;
     }
 
+.service-divider {
+  width: 240px;
+  height: 1px;
+  background: #ccc;
+  margin: 3rem auto;
+}
+    
     .footer-divider {
       width: 100%;
       height: 1px;
@@ -128,6 +138,8 @@
       margin: 0 auto 2rem;
     }
 
+
+    
     .contact {
       display: flex;
       justify-content: center;
@@ -226,6 +238,9 @@
       </div>
     </section>
 
+<div class="service-divider"></div>
+
+    
     <div class="service-areas">
       <div class="line-1">available in</div>
       <div class="line-2">• Orlando • Tampa • Miami • Fort Lauderdale</div>
